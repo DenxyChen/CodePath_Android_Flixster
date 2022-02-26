@@ -1,9 +1,9 @@
 package com.example.flixster
 
 import android.content.res.Configuration
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
@@ -36,9 +36,12 @@ class MainActivity : AppCompatActivity() {
         rvMovies.layoutManager = LinearLayoutManager(this)
 
         val orientation = resources.configuration.orientation
-        if(orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setContentView(R.layout.activity_main)
+
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Log.i(TAG, "Landscape")
             supportActionBar?.hide()
+        } else {
+            Log.i(TAG, "Portrait")
         }
 
         val client = AsyncHttpClient()

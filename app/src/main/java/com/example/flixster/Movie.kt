@@ -5,6 +5,7 @@ import org.json.JSONArray
 data class Movie(
     val movieID: Int,
     private val posterPath: String,
+
     val title: String,
     val overview: String,
 ) {
