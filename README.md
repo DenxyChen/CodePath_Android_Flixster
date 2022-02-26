@@ -23,7 +23,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-<img src="https://i.imgur.com/FgYVVsV.gif"><br>
+<img src='./misc/your_file.gif'><br>
 
 ### Notes
 I had difficulty figuring out where to modify the view to display the backdrop image. I also wanted to add a click listener to highlight a currently selected item. I tried
