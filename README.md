@@ -23,11 +23,14 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-<img src="https://i.imgur.com/FgYVVsV.gif"><br>
+<img src='./misc/flixster-week-1.gif'><br>
 
 ### Notes
 I had difficulty figuring out where to modify the view to display the backdrop image. I also wanted to add a click listener to highlight a currently selected item. I tried
 to implement a loading GIF but toGif() is no longer part of the library and it does not load the image as a GIF by default.
+
+It may be difficult to see in the GIF but there is about 20 frames of the loading image displayed at the beginning. Changing the network setting to anything slower than LTE
+resulted in no data being loaded.
 
 ### Open-source libraries used
 
