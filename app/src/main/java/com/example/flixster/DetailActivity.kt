@@ -59,12 +59,12 @@ class DetailActivity : YouTubeBaseActivity() {
                 val youtubeKey = movieTrailerJson.getString("key")
 
                 // Play the YouTube video with this trailer
-                initializeYoutube(youtubeKey)
+                initializeYoutube(youtubeKey, movie.voteAverage)
             }
         })
     }
 
-    private fun initializeYoutube(youtubeKey: String) {
+    private fun initializeYoutube(youtubeKey: String, voteAverage: Double) {
         ytPlayerView.initialize(YOUTUBE_API_KEY, object: YouTubePlayer.OnInitializedListener{
             override fun onInitializationSuccess(
                 provider: YouTubePlayer.Provider?,
@@ -72,7 +72,13 @@ class DetailActivity : YouTubeBaseActivity() {
                 p2: Boolean
             ) {
                 Log.i(TAG, "onInitializationSuccess")
-                player?.cueVideo(youtubeKey)
+                // Autoplays popular movies
+                if (voteAverage > 5.0) {
+                    player?.loadVideo(youtubeKey)
+                }
+                else {
+                    player?.cueVideo(youtubeKey)
+                }
             }
 
             override fun onInitializationFailure(
