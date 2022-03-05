@@ -22,13 +22,11 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
-
 <img src='./misc/flixster-week-2.gif'><br>
 
 ### Notes
 
-I do not understand the instructions for multiple shared element transitions and I'm not sure how to add an overlay for popular movies. Is it necessary to have one since it autoplays?
+I do not understand the instructions for multiple shared element transitions and I'm not sure how to add an overlay for popular movies. Is it necessary to have one since it autoplays? Now that I think about it, I think the overlay is referring to the images in movieItemView which I can probably do with Glide.
 
 ## Open-source libraries used
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
